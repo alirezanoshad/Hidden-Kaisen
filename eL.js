@@ -2,6 +2,8 @@
 // html references
 const jjkVideo = document.querySelector('#myVideo')
 const jjkAudio = document.querySelector('#jjkAudio')
+const moonVideo = document.querySelector('#moonVideo')
+const moonAudio = document.querySelector('#moonAudio')
 const box = document.querySelector('#main')
 const myAudio = document.querySelector('#myAudio')
 const container = document.querySelector('.container')
@@ -10,7 +12,8 @@ document.addEventListener('keydown', keyBoardMovements )
 ///
 //background jjk Track
 const jjkTrack = []
-
+//background moon Track
+const moonTrack = []
 // an array in order to save the last Background color and keep track of it
 const bgcHistory = ['#ff7221']
 // music control by tracking it
@@ -107,6 +110,13 @@ function keyBoardMovements(keyboardEvent) {
             jjkTrack.push('m')
             if (jjkTrack.length % 2 != 0) {
                 // HTMLMediaElement: play()
+                moonAudio.pause()
+                moonVideo.pause()
+                document.body.style.backgroundColor = '#1e1d1d'
+                container.style.opacity = '1'
+                moonVideo.style.opacity = '0'
+                console.log('moon not happeining');
+                //then
                 jjkAudio.play()
                 jjkVideo.play()
                 document.body.style.backgroundColor = 'black'
@@ -122,7 +132,52 @@ function keyBoardMovements(keyboardEvent) {
                 container.style.opacity = '1'
                 jjkVideo.style.opacity = '0'
                 console.log('jjk not happeining');
+                //
+                moonAudio.pause()
+                moonVideo.pause()
+                document.body.style.backgroundColor = '#1e1d1d'
+                container.style.opacity = '1'
+                moonVideo.style.opacity = '0'
+                console.log('moon not happeining');
             }
+            break
+        case 'N':
+        case 'n':
+        case 'د':
+            moonTrack.push('m')
+            if (moonTrack.length % 2 != 0) {
+                // HTMLMediaElement: play()
+                jjkAudio.pause()
+                jjkVideo.pause()
+                document.body.style.backgroundColor = '#1e1d1d'
+                container.style.opacity = '1'
+                jjkVideo.style.opacity = '0'
+                console.log('jjk not happeining');
+                //then
+                moonAudio.play()
+                moonVideo.play()
+                document.body.style.backgroundColor = 'black'
+                container.style.opacity = '0'
+                moonVideo.style.opacity = '1'
+                console.log('play music track');
+                // if the number is odd, pause it
+            } else {
+                // HTMLMediaElement: pause()
+                moonAudio.pause()
+                moonVideo.pause()
+                document.body.style.backgroundColor = '#1e1d1d'
+                container.style.opacity = '1'
+                moonVideo.style.opacity = '0'
+                console.log('moon not happeining');
+                //
+                jjkAudio.pause()
+                jjkVideo.pause()
+                document.body.style.backgroundColor = '#1e1d1d'
+                container.style.opacity = '1'
+                jjkVideo.style.opacity = '0'
+                console.log('jjk not happeining');
+            }
+
         default:
             // if the pressed key is not defined show this in clg
             console.log('not defined pressed key');
