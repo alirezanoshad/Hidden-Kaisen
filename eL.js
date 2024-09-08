@@ -115,7 +115,6 @@ function keyBoardMovements(keyboardEvent) {
                 document.body.style.backgroundColor = '#1e1d1d'
                 container.style.opacity = '1'
                 moonVideo.style.opacity = '0'
-                console.log('moon not happeining');
                 //then
                 jjkAudio.play()
                 jjkVideo.play()
@@ -131,7 +130,7 @@ function keyBoardMovements(keyboardEvent) {
                 document.body.style.backgroundColor = '#1e1d1d'
                 container.style.opacity = '1'
                 jjkVideo.style.opacity = '0'
-                console.log('jjk not happeining');
+                console.log('jjk not happeining anymore');
                 //
                 moonAudio.pause()
                 moonVideo.pause()
@@ -152,7 +151,6 @@ function keyBoardMovements(keyboardEvent) {
                 document.body.style.backgroundColor = '#1e1d1d'
                 container.style.opacity = '1'
                 jjkVideo.style.opacity = '0'
-                console.log('jjk not happeining');
                 //then
                 moonAudio.play()
                 moonVideo.play()
@@ -168,19 +166,22 @@ function keyBoardMovements(keyboardEvent) {
                 document.body.style.backgroundColor = '#1e1d1d'
                 container.style.opacity = '1'
                 moonVideo.style.opacity = '0'
-                console.log('moon not happeining');
+                console.log('going to moon not happeining anymore');
                 //
                 jjkAudio.pause()
                 jjkVideo.pause()
                 document.body.style.backgroundColor = '#1e1d1d'
                 container.style.opacity = '1'
                 jjkVideo.style.opacity = '0'
-                console.log('jjk not happeining');
             }
-
+            break
+        case 'Escape':
+            // in order to close the current tab
+            window.close()
+            break
         default:
             // if the pressed key is not defined show this in clg
-            console.log('not defined pressed key');
+            console.log('Pressed key not defined');
             break;
     }
     // calls updateTransform function in order update the changes in css Transform property
