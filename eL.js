@@ -10,8 +10,8 @@ const container = document.querySelector('.container')
 const blackImage = document.querySelector('#blackImage')
 document.addEventListener('keydown', keyBoardMovements )
 ///
-// an alert in order to notify use about hotkeys being
-window.alert('N & M and keys are forbidden to press on.. to close the window press Esc key')
+// an alert in order to notify use about hotkeys being(instead of <br> wen ca use newline character(\n) for line break)
+window.alert('The Onlu Rule: N & M and keys are forbidden to press on..\n to close the window press Esc key')
 // background jjk Track
 const jjkTrack = []
 //background moon Track
