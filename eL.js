@@ -18,8 +18,8 @@ const moonTrack = []
 const bgcHistory = ['#ff7221']
 // music control by tracking it
 const musicTrack = []
-// moving left bacics and we also can use it to move right
-// moving up bacics and we also can use it to move down
+// moving left and right basics(x) stores in positionTrackerX
+// moving up and down basics(y) stores in positionTrackerY
 let positionTrackerX = 0
 let positionTrackerY = 0
 // keyboard function based on moves
@@ -38,7 +38,7 @@ function keyBoardMovements(keyboardEvent) {
             bgcHistory.push('green');
             break;
                 
-        case '3':   
+        case '3':
             box.style.backgroundColor = 'blue'
             bgcHistory.push('blue');
             break; 
@@ -184,7 +184,7 @@ function keyBoardMovements(keyboardEvent) {
             console.log('Pressed key not defined');
             break;
     }
-    // calls updateTransform function in order update the changes in css Transform property
+    // calls updateTransform function in order update the changes in css Transform property, without this, changes in positionTrackerY or positionTrackerX wont be updated to css transform property
     updateTransform()
 }
 // keyboard function ends here
