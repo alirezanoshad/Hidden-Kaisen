@@ -10,7 +10,9 @@ const container = document.querySelector('.container')
 const blackImage = document.querySelector('#blackImage')
 document.addEventListener('keydown', keyBoardMovements )
 ///
-//background jjk Track
+// an alert in order to notify use about hotkeys being
+window.alert('N & M and keys are forbidden to press on.. to close the window press Esc key')
+// background jjk Track
 const jjkTrack = []
 //background moon Track
 const moonTrack = []
